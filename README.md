@@ -1,6 +1,8 @@
 # Llama Goals
 A terminal based AI-powered task planning and execution assistant that uses Ollama to generate responses. It helps users refine their goals, create detailed task plans, and guide them through task execution.
 
+<img width="1164" alt="Screenshot 2024-08-01 at 10 13 57 AM" src="https://github.com/user-attachments/assets/f255391d-5154-4e6c-bf8f-d338001578c3">
+
 ## Features
 
 - Interactive goal refinement through clarifying questions
