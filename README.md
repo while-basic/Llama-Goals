@@ -26,12 +26,7 @@ Before you begin, ensure you have met the following requirements:
    cd Llama-Goals
    ```
 
-2. Install the required Python packages:
-   ```
-   pip install -r requirements.txt
-   ```
-
-3. Ensure Ollama is installed and running on your system. Follow the [Ollama installation guide](https://github.com/jmorganca/ollama#installation) if you haven't already set it up.
+2. Ensure Ollama is installed and running on your system. Follow the [Ollama installation guide](https://github.com/jmorganca/ollama#installation) if you haven't already set it up.
 
 ## Usage
 
