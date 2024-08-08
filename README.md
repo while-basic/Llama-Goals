@@ -16,7 +16,6 @@ Before you begin, ensure you have met the following requirements:
 
 - Python 3.7 or higher
 - [Ollama](https://ollama.ai/) installed and running on your system
-- Required Python packages (see `requirements.txt`)
 
 ## Installation
 
