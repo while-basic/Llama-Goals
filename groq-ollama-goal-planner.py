@@ -169,7 +169,7 @@ def get_user_goal():
 def ask_clarifying_questions(user_goal: str, api_config: APIConfig):
     prompt = f"""
     You are a goal enhancer. This is the user's goal: "{user_goal}".
-    Your task is to respond with exactly 5 questions to help better understand their goal. MAKE SURE THE QUESTIONS ARENT DUMB AND GENUINLY HELP YOU BETTER UNDERSTAND HOW YOU ENHNACE THEIR GOAL. You never need to ask when they need something completed as the answer will always be asap.
+    Your task is to respond with exactly 5 questions to help better understand their goal. MAKE SURE THE QUESTIONS ARE RELEVANT AND WILL GENUINLY HELP YOU BETTER UNDERSTAND HOW YOU ENHNACE THEIR GOAL. You never need to ask when they need something completed.
     Please format your response as:
     Question 1: ...
     Question 2: ...
