@@ -1,21 +1,21 @@
 import os
-import re
-import requests
+import re  # Regular expressions for parsing text
+import requests  # HTTP requests library
 from typing import List, Optional, Dict, Callable
-from pydantic import BaseModel, Field
-from rich.console import Console
-from rich.panel import Panel
-from rich.prompt import Prompt
-from rich.text import Text
-from prompts import ENHANCE_PROMPT, REFINE_GOAL_PROMPT, TASK_PLAN_PROMPT
+from pydantic import BaseModel, Field  # Data validation and settings management
+from rich.console import Console  # Rich text and formatting
+from rich.panel import Panel  # Panel for console output
+from rich.prompt import Prompt  # Prompt user for input
+from rich.text import Text  # Text formatting
+from prompts import ENHANCE_PROMPT, REFINE_GOAL_PROMPT, TASK_PLAN_PROMPT  # Import custom prompts
 
 # API endpoints
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
-console = Console()
+console = Console()  # Initialize console for rich text output
 
-TASK_COMPLETE_PHRASE = "TASK IS COMPLETE"
+TASK_COMPLETE_PHRASE = "TASK IS COMPLETE"  # Phrase to mark task as complete
 
 # Pydantic models
 class Task(BaseModel):
@@ -39,6 +39,7 @@ class APIConfig(BaseModel):
     api_key: Optional[str] = None
 
 def send_prompt(prompt: str, api_config: APIConfig) -> str:
+    # Send the prompt to the appropriate API based on the configuration
     if api_config.api_type == "ollama":
         return send_ollama_prompt(prompt, api_config.model)
     elif api_config.api_type == "groq":
@@ -47,16 +48,18 @@ def send_prompt(prompt: str, api_config: APIConfig) -> str:
         raise ValueError(f"Unsupported API type: {api_config.api_type}")
 
 def send_ollama_prompt(prompt: str, model: str) -> str:
+    # Send a prompt to the Ollama API and return the response
     data = {
         "model": model,
         "prompt": prompt,
         "stream": False
     }
     response = requests.post(OLLAMA_API_URL, json=data)
-    response.raise_for_status()
+    response.raise_for_status()  # Ensure we notice bad responses
     return response.json()['response']
 
 def send_groq_prompt(prompt: str, model: str, api_key: str) -> str:
+    # Send a prompt to the Groq API and return the response
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
@@ -66,10 +69,11 @@ def send_groq_prompt(prompt: str, model: str, api_key: str) -> str:
         "messages": [{"role": "user", "content": prompt}]
     }
     response = requests.post(GROQ_API_URL, json=data, headers=headers)
-    response.raise_for_status()
+    response.raise_for_status()  # Ensure we notice bad responses
     return response.json()['choices'][0]['message']['content']
 
 def parse_tasks(content: str) -> TaskPlan:
+    # Parse the task plan content and extract goal and tasks
     goal_match = re.search(r'GOAL:\s*(.*?)(?=\n\nTASK|\Z)', content, re.DOTALL)
     goal = goal_match.group(1).strip() if goal_match else ""
 
@@ -113,6 +117,7 @@ def parse_tasks(content: str) -> TaskPlan:
     return TaskPlan(goal=goal, tasks=tasks)
 
 def print_task(task: Task):
+    # Print a task using rich console formatting
     task_info = [
         f"[bold]{task.name}[/bold]",
         f"Description: {task.description}" if task.description else "",
@@ -133,6 +138,7 @@ def print_task(task: Task):
     ))
 
 def save_task_plan_to_file(task_plan: TaskPlan, filename: str = "Goal_and_Tasks.txt"):
+    # Save the task plan to a file
     with open(filename, "w") as f:
         f.write(f"Goal: {task_plan.goal}\n\n")
         for task in task_plan.tasks:
@@ -146,27 +152,33 @@ def save_task_plan_to_file(task_plan: TaskPlan, filename: str = "Goal_and_Tasks.
             f.write(f"File/Directory: {task.file_or_directory or 'Not specified'}\n\n")
 
 def read_file(file_path: str) -> str:
+    # Read the contents of a file and return as a string
     with open(file_path, 'r') as file:
         return file.read()
 
 def write_file(args: str) -> str:
+    # Write the provided content to a file
     file_path, content = args.split(':', 1)
     with open(file_path, 'w') as file:
         file.write(content)
     return f"File written: {file_path}"
 
 def list_directory(dir_path: str) -> str:
+    # List all files and directories in the specified directory
     return ', '.join(os.listdir(dir_path))
 
 def print_welcome():
+    # Print the welcome message using rich formatting
     welcome_text = Text("🥅 Welcome to Llama Goals 🥅", style="bold magenta")
     console.print(Panel(welcome_text, expand=False, border_style="cyan"))
 
 def get_user_goal():
+    # Prompt the user to enter their goal
     goal_prompt = "[bold cyan]What is your goal?[/bold cyan]"
     return Prompt.ask(goal_prompt)
 
 def ask_clarifying_questions(user_goal: str, api_config: APIConfig):
+    # Generate and ask clarifying questions to better understand the user's goal
     prompt = f"""
     You are a goal enhancer. This is the user's goal: "{user_goal}".
     Your task is to respond with exactly 5 questions to help better understand their goal. MAKE SURE THE QUESTIONS ARE RELEVANT AND WILL GENUINLY HELP YOU BETTER UNDERSTAND HOW YOU ENHNACE THEIR GOAL. You never need to ask when they need something completed.
@@ -187,6 +199,7 @@ def ask_clarifying_questions(user_goal: str, api_config: APIConfig):
     return questions[:5]
 
 def get_user_responses(questions: List[str]) -> List[str]:
+    # Get user responses to the clarifying questions
     responses = []
     for i, question in enumerate(questions, 1):
         console.print(f"\n[bold cyan]Question {i} of 5:[/bold cyan]")
@@ -196,15 +209,18 @@ def get_user_responses(questions: List[str]) -> List[str]:
     return responses
 
 def print_goal(goal: str):
+    # Print the user's goal using rich formatting
     console.print(Panel(goal, title="[bold cyan]The Goal", border_style="cyan", expand=False))
 
 def refine_goal(goal: str, clarifying_qas: List[str], api_config: APIConfig) -> str:
+    # Refine the user's goal based on their responses to clarifying questions
     qas_formatted = "\n".join(f"Q{i+1}: {qa[0]}\nA{i+1}: {qa[1]}" for i, qa in enumerate(clarifying_qas))
     refined_goal_content = send_prompt(REFINE_GOAL_PROMPT.format(user_goal=goal, clarifying_qas=qas_formatted), api_config)
     match = re.search(r'<goal>(.*?)</goal>', refined_goal_content, re.DOTALL)
     return match.group(1).strip() if match else goal
 
 def update_task_status(task: Task) -> Task:
+    # Update the status of a task based on user input
     while True:
         console.print(f"\n[bold cyan]Current Task: {task.name}[/bold cyan]")
         console.print(f"Status: {task.status}")
@@ -225,12 +241,14 @@ def update_task_status(task: Task) -> Task:
     return task
 
 def execute_task_plan(task_plan: TaskPlan):
+    # Execute the tasks in the task plan
     for task in task_plan.tasks:
         print_task(task)
         updated_task = update_task_status(task)
         task.status = updated_task.status
 
 def select_api_and_model() -> APIConfig:
+    # Prompt the user to select an API type and model
     api_type = Prompt.ask(
         "[bold cyan]Select API type[/bold cyan]",
         choices=["ollama", "groq"],
@@ -252,6 +270,7 @@ def select_api_and_model() -> APIConfig:
         return APIConfig(api_type="groq", model=model, api_key=api_key)
 
 def main():
+    # Main function to orchestrate the program workflow
     print_welcome()
     api_config = select_api_and_model()
     

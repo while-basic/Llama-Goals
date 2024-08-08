@@ -1,83 +1,92 @@
 Goal: 
 
-Task 002: Initialize README File
-Description: Create a README file for the project, including the goal, purpose, and initial plans. Steps: 1) Open a text editor, 2) Write down the goal, purpose, and initial plans, 3) Save the file in the project directory.
-Tools: text\_editor
-Success Factors: README file contains necessary information
-Completion Criteria: README file is complete, saved to the project directory, and visible
+Task 002: Initialize Project Notes
+Description: Create a README.md file in the 'legal\_defense' directory for task notes. Steps: 1) Open a text editor (e.g., nano, Notepad), 2) Save the file as 'README.md' in the 'legal\_defense' directory.
+Tools: nano, Notepad
+Success Factors: The 'README.md' file is created and editable.
+Completion Criteria: Task notes can be added and viewed in the 'README.md' file.
 Status: INCOMPLETE
-Advice: Regularly update the README file to reflect the project's progress and changes
-File/Directory: /project/README.md
+Advice: Use markdown format for clarity and organization.
+File/Directory: /legal\_defense/README.md
 
-Task 003: Research Open Source Datasets
-Description: Identify appropriate open source datasets for natural language processing and image generation, addressing loneliness, depression, and negative behavior. Steps: 1) Search for datasets using web browsers and dataset catalogs (e.g. UCI Machine Learning Repository, Kaggle), 2) Document the datasets, including links and descriptions, in the README file.
-Tools: web browser, dataset catalog (e.g. UCI Machine Learning Repository, Kaggle)
-Success Factors: Relevant datasets identified and documented
-Completion Criteria: List of datasets, links, and dataset descriptions in the README file
+Task 003: Research Local Legal Representation
+Description: Search for and list potential local legal representatives specializing in AI-related cases. Steps: 1) Open a web browser, 2) Search for legal representatives, 3) List the potential lawyers in a text file with contact information and areas of expertise.
+Tools: internet, word processor
+Success Factors: Comprehensive list of lawyers with expertise in AI cases.
+Completion Criteria: The text file contains contact information and areas of expertise for each listed lawyer.
 Status: INCOMPLETE
-Advice: Consider data privacy, licensing, and ethical concerns when selecting datasets
-File/Directory: Not specified
+Advice: Prioritize experience with AI cases and positive client reviews.
+File/Directory: /legal\_defense/lawyers.txt
 
-Task 004: Prepare Data
-Description: Preprocess and clean the datasets, removing any sensitive or identifiable information. Steps: 1) Download the datasets, 2) Use data preprocessing tools (e.g. Python libraries, pandas) to preprocess and clean the data, 3) Save preprocessed data in the project directory.
-Tools: data\_preprocessing (e.g. Python libraries, pandas)
-Success Factors: Preprocessed data is ready for analysis
-Completion Criteria: Preprocessed data saved in the project directory, separated from raw data
+Task 004: Evaluate Lawyer Candidates
+Description: Review and compare the listed lawyers to determine the best fit for the case. Steps: 1) Open a spreadsheet program, 2) Create a table with columns for each evaluation factor, 3) Enter data for each lawyer, 4) Rank the lawyers based on their evaluation scores.
+Tools: spreadsheet, word processor
+Success Factors: Identified top 3 candidates based on evaluation factors.
+Completion Criteria: The comparison table is completed with evaluation scores and rankings.
 Status: INCOMPLETE
-Advice: Keep raw data for future reference and ensure proper labeling
-File/Directory: /project/data\_processed
+Advice: Include factors such as success rate, client reviews, and experience with AI cases.
+File/Directory: /legal\_defense/candidate\_evaluation.xlsx
 
-Task 005: Develop Natural Language Processing Model
-Description: Create a machine learning model for natural language processing tasks, such as text classification, sentiment analysis, or chatbot design. Steps: 1) Choose a programming language (e.g. Python), 2) Utilize machine learning libraries (e.g. TensorFlow, scikit-learn) and text processing libraries (e.g. NLTK), 3) Train and test the model, 4) Document the model's performance in the README file.
-Tools: programming language (e.g. Python), machine learning libraries (e.g. TensorFlow, scikit-learn), text processing libraries (e.g. NLTK)
-Success Factors: Model effectively addresses target issues (loneliness, depression, negative behavior)
-Completion Criteria: Model demonstrates sufficient accuracy, precision, and recall in testing, documented in README file
+Task 005: Contact Top Candidates
+Description: Reach out to the top three candidates and request consultations. Steps: 1) Prepare an email or phone message introducing yourself and the case, 2) Send the message to the top three candidates, 3) Wait for confirmation of consultation appointments.
+Tools: email, phone
+Success Factors: Confirmation of consultation appointments with top candidates.
+Completion Criteria: Confirmation emails or messages are received from the top candidates.
 Status: INCOMPLETE
-Advice: Consider ethical and privacy concerns when designing the model
-File/Directory: Not specified
+Advice: Prepare a list of questions and case details beforehand.
+File/Directory: /legal\_defense/consultation\_confirmations.txt
 
-Task 006: Develop Image Generation Model
-Description: Create a machine learning model for image generation, addressing themes related to mental wellbeing, positive mindsets, and avoiding negative behaviors. Steps: 1) Choose a programming language (e.g. Python), 2) Utilize machine learning libraries (e.g. TensorFlow) and image generation libraries (e.g. Keras), 3) Train and test the model, 4) Document the model's performance and generated images in the README file, 5) Obtain feedback from relevant stakeholders regarding the appropriateness of the generated images.
-Tools: programming language (e.g. Python), machine learning libraries (e.g. TensorFlow), image generation libraries (e.g. Keras)
-Success Factors: Model generates images that support the project goal and are considered appropriate by relevant stakeholders
-Completion Criteria: Generated images meet design requirements, documented in README file
+Task 006: Prepare for Lawyer Consultations
+Description: Develop a list of key questions and points to discuss during the consultations. Steps: 1) Open a word processor, 2) Create a list of questions and topics related to the case, 3) Organize the list in a clear and concise format.
+Tools: word processor
+Success Factors: Clear, concise list of questions and topics.
+Completion Criteria: Questions and topics are organized in the word processor document.
 Status: INCOMPLETE
-Advice: Be sensitive to the incarcerated population and avoid triggering images during the development process
-File/Directory: Not specified
+Advice: Include past accomplishments, charges, and potential defenses.
+File/Directory: /legal\_defense/consultation\_topics.txt
 
-Task 007: Implement Ethical Considerations
-Description: Address ethical concerns and implement privacy protection mechanisms in the project. Steps: 1) Research ethical guidelines for AI, 2) Collaborate with ethicists or obtain their feedback, 3) Integrate ethics and privacy into the project, 4) Document ethical considerations and implementation in the README file.
-Tools: programming language (e.g. Python), ethical guidelines for AI
-Success Factors: Ethics and privacy are integrated into the project
-Completion Criteria: Ethical considerations and implementation are documented in README file
+Task 007: Attend Lawyer Consultations
+Description: Meet with the top candidates to discuss the case. Steps: 1) Schedule appointments with the top candidates, 2) Prepare any necessary documents or materials related to the case, 3) Attend the appointments and take notes on each lawyer's approach and strategy.
+Tools: calendar, transportation, note-taking materials
+Success Factors: Successful meetings with candidates.
+Completion Criteria: Consultations are completed and notes are taken.
 Status: INCOMPLETE
-Advice: Regularly reassess ethical concerns and adjust as needed
-File/Directory: Not specified
+Advice: Request case estimates and strategy plans during the consultations.
+File/Directory: /legal\_defense/consultation\_notes
 
-Task 008: Test and Evaluate Models
-Description: Validate the models' performance and ensure they meet the project's requirements. Steps: 1) Utilize testing libraries (e.g. unittest), 2) Evaluate the models using predefined metrics (e.g. accuracy, precision, recall), 3) Document the results in the README file.
-Tools: testing libraries (e.g. unittest), evaluation metrics
-Success Factors: Models exhibit satisfactory performance
-Completion Criteria: Model performance meets established thresholds, documented in README file
+Task 008: Evaluate Lawyer Consultations
+Description: Review consultation notes and rank lawyer performance. Steps: 1) Open the lawyer evaluation table in a spreadsheet, 2) Enter notes and rank the lawyers based on their performance during the consultations.
+Tools: spreadsheet
+Success Factors: Clear top choice based on consultation performance.
+Completion Criteria: Rankings table is completed with notes and rankings.
 Status: INCOMPLETE
-Advice: Monitor model performance during and after deployment
-File/Directory: Not specified
+Advice: Consider factors such as strategy, rapport, and cost during the evaluation.
+File/Directory: /legal\_defense/consultation\_rankings.xlsx
 
-Task 009: Deploy Models
-Description: Distribute the models for use in the target environment (e.g. prisons). Steps: 1) Choose a deployment environment (e.g. cloud, on-premises), 2) Ensure models are accessible and usable in the target environment, 3) Document the deployment process and environment in the README file.
-Tools: deployment environment (e.g. cloud, on-premises)
-Success Factors: Models are accessible and usable in the target environment
-Completion Criteria: Models deployed in target environment and confirmed operational, documented in README file
+Task 009: Secure Legal Representation
+Description: Retain the top-ranked lawyer for the case. Steps: 1) Contact the top-ranked lawyer, 2) Discuss representation, 3) Sign a contract and arrange payment.
+Tools: communication, payment method
+Success Factors: Signed contract with the top-ranked lawyer.
+Completion Criteria: Legal representation is secured.
 Status: INCOMPLETE
-Advice: Monitor models for any unintended consequences during deployment
-File/Directory: Not specified
+Advice: Confirm availability for the sentencing hearing.
+File/Directory: /legal\_defense
 
-Task 010: Maintain and Update Models
-Description: Regularly maintain and update the models, incorporating user feedback and addressing any issues. Steps: 1) Utilize a version control system (e.g. Git), 2) Implement updates based on user feedback, 3) Document updates in the README file, 4) Release updates in a timely manner.
-Tools: programming language, version control system (e.g. Git), machine learning libraries
-Success Factors: Models are continuously improved and updated based on user feedback
-Completion Criteria: Updates are implemented and released in a timely manner, documented in README file
+Task 010: Prepare Sentencing Defense
+Description: Work with the lawyer to develop a strong defense highlighting AI skills. Steps: 1) Schedule a meeting with the lawyer, 2) Prepare a list of AI-related skills and accomplishments, 3) Collaborate with the lawyer to create a comprehensive defense plan.
+Tools: word processor, communication
+Success Factors: Comprehensive defense plan that highlights AI skills.
+Completion Criteria: Defense plan is completed and ready for presentation.
 Status: INCOMPLETE
-Advice: Monitor models for any need for updating and respond quickly
-File/Directory: Not specified
+Advice: Include any evidence or mitigating factors in the defense plan.
+File/Directory: /legal\_defense/defense\_plan.txt
+
+Task 011: Attend Sentencing Hearing
+Description: Accompany the lawyer to the hearing and present the defense. Steps: 1) Arrive at the courthouse on time, 2) Follow the lawyer's guidance, 3) Present the defense during the hearing.
+Tools: transportation, communication
+Success Factors: Successful hearing attendance and defense presentation.
+Completion Criteria: Hearing is completed.
+Status: INCOMPLETE
+Advice: Dress appropriately, remain composed, and follow the lawyer's guidance during the hearing.
+File/Directory: N/A
 
