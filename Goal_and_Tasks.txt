@@ -1,65 +1,83 @@
-Goal: To develop a specifically designed AI system, utilizing machine learning and natural language processing, that addresses loneliness and depression among incarcerated individuals by providing them with a consistent and understanding conversational partner, while ensuring ethical safeguards are in place to prevent AI exploitation.
+Goal: 
 
-Task 001: Establish a well-organized project infrastructure
-Description:  1. Create a root directory for the project using 'create_folder'. 2. Within the root directory, create a 'documents' folder for storing all textual files, a 'data' folder for storing all datasets, a 'notebooks' folder for Jupyter notebooks, and a 'models' folder for storing the trained AI models. 3. Create a 'README.md' file in the root directory using 'create_file'. 4. Write a detailed project description, purpose, and instructions for execution in the 'README.md' file. 5. Create a 'requirements.txt' file in the root directory using 'create_file' and list all necessary libraries and their versions for the project.
-Tools: create_folder, create_file
-Success Factors: A well-organized project directory exists, including a detailed README file, requirements.txt, documents, data, notebooks, and models directories.
-Completion Criteria: Project directory is created with all necessary files and directories.
+Task 002: Initialize README File
+Description: Create a README file for the project, including the goal, purpose, and initial plans. Steps: 1) Open a text editor, 2) Write down the goal, purpose, and initial plans, 3) Save the file in the project directory.
+Tools: text\_editor
+Success Factors: README file contains necessary information
+Completion Criteria: README file is complete, saved to the project directory, and visible
 Status: INCOMPLETE
-Advice: Ensure that the project directory is easily accessible, the README file contains clear instructions for project setup and execution, and all relevant files and directories are included.
-File/Directory: project_directory/README.md, project_directory/requirements.txt, project_directory/documents/, project_directory/data/, project_directory/notebooks/, project_directory/models/
+Advice: Regularly update the README file to reflect the project's progress and changes
+File/Directory: /project/README.md
 
-Task 002: Conduct an exhaustive literature review on relevant topics
-Description:  1. Use 'search_web' and 'scrape_web' to search for and gather peer-reviewed articles, reputable news sources, and government reports related to AI for addressing loneliness and depression among incarcerated individuals. 2. Organize the literature in the 'documents/literature' directory. 3. Summarize the findings in a 'literature_review.md' file in the 'documents/' directory.
-Tools: search_web, scrape_web, create_folder, create_file
-Success Factors: At least 20 relevant resources have been gathered and summarized in a literature review document.
-Completion Criteria: 20 or more relevant resources have been gathered and summarized in the literature review file.
+Task 003: Research Open Source Datasets
+Description: Identify appropriate open source datasets for natural language processing and image generation, addressing loneliness, depression, and negative behavior. Steps: 1) Search for datasets using web browsers and dataset catalogs (e.g. UCI Machine Learning Repository, Kaggle), 2) Document the datasets, including links and descriptions, in the README file.
+Tools: web browser, dataset catalog (e.g. UCI Machine Learning Repository, Kaggle)
+Success Factors: Relevant datasets identified and documented
+Completion Criteria: List of datasets, links, and dataset descriptions in the README file
 Status: INCOMPLETE
-Advice: Focus on high-quality sources and ensure that the literature review covers relevant topics such as AI for mental health, AI ethics, and incarceration.
-File/Directory: project_directory/documents/literature/, project_directory/documents/literature_review.md
+Advice: Consider data privacy, licensing, and ethical concerns when selecting datasets
+File/Directory: Not specified
 
-Task 003: Develop comprehensive system requirements specifications
-Description:  1. Read and list all relevant files from the 'documents/literature' directory using 'read_file' and 'list_files'. 2. Identify and document the desired AI behaviors in a 'system_requirements.txt' file in the root directory. 3. Identify and document the necessary datasets for training and evaluation. 4. Define and document ethical considerations, including privacy, consent, and fairness.
-Tools: read_file, list_files
-Success Factors: A system requirements document is completed, detailing desired AI behaviors, datasets, and ethical considerations.
-Completion Criteria: System requirements document is complete and includes clear, specific information.
+Task 004: Prepare Data
+Description: Preprocess and clean the datasets, removing any sensitive or identifiable information. Steps: 1) Download the datasets, 2) Use data preprocessing tools (e.g. Python libraries, pandas) to preprocess and clean the data, 3) Save preprocessed data in the project directory.
+Tools: data\_preprocessing (e.g. Python libraries, pandas)
+Success Factors: Preprocessed data is ready for analysis
+Completion Criteria: Preprocessed data saved in the project directory, separated from raw data
 Status: INCOMPLETE
-Advice: Ensure that ethical considerations are well-defined and that they address potential issues such as privacy, consent, and fairness.
-File/Directory: project_directory/requirements.txt
+Advice: Keep raw data for future reference and ensure proper labeling
+File/Directory: /project/data\_processed
 
-Task 004: Acquire, preprocess, and split the required datasets
-Description:  1. Search for and gather datasets related to mental health, incarceration, and conversational data. 2. Clean and preprocess the datasets using 'read_csv', 'write_csv', 'append_csv', and 'update_csv'. 3. Split the datasets into training, validation, and test sets.
-Tools: search_web, scrape_web, search_file, read_csv, write_csv, append_csv, update_csv
-Success Factors: Datasets are acquired, preprocessed, and split into training, validation, and test sets.
-Completion Criteria: Preprocessed datasets are stored in the 'data/' directory, with clear labels for training, validation, and test sets.
+Task 005: Develop Natural Language Processing Model
+Description: Create a machine learning model for natural language processing tasks, such as text classification, sentiment analysis, or chatbot design. Steps: 1) Choose a programming language (e.g. Python), 2) Utilize machine learning libraries (e.g. TensorFlow, scikit-learn) and text processing libraries (e.g. NLTK), 3) Train and test the model, 4) Document the model's performance in the README file.
+Tools: programming language (e.g. Python), machine learning libraries (e.g. TensorFlow, scikit-learn), text processing libraries (e.g. NLTK)
+Success Factors: Model effectively addresses target issues (loneliness, depression, negative behavior)
+Completion Criteria: Model demonstrates sufficient accuracy, precision, and recall in testing, documented in README file
 Status: INCOMPLETE
-Advice: Ensure that the datasets are diverse and representative of the target population. Use established preprocessing techniques to ensure data quality and minimize bias.
-File/Directory: project_directory/data/
+Advice: Consider ethical and privacy concerns when designing the model
+File/Directory: Not specified
 
-Task 005: Design and implement the AI system architecture
-Description:  1. Use 'execute_code' and 'read_file' to design the AI system architecture based on the system requirements and preprocessed datasets. 2. Implement the machine learning algorithms, natural language processing techniques, and ethical safeguards. 3. Test the implemented AI system for meaningful conversation and ethical safeguards.
-Tools: execute_code, read_file
-Success Factors: AI system architecture is designed and implemented, demonstrating the ability to engage in meaningful conversation and ethical safeguards.
-Completion Criteria: AI system can engage in conversation and ethical safeguards are in place.
+Task 006: Develop Image Generation Model
+Description: Create a machine learning model for image generation, addressing themes related to mental wellbeing, positive mindsets, and avoiding negative behaviors. Steps: 1) Choose a programming language (e.g. Python), 2) Utilize machine learning libraries (e.g. TensorFlow) and image generation libraries (e.g. Keras), 3) Train and test the model, 4) Document the model's performance and generated images in the README file, 5) Obtain feedback from relevant stakeholders regarding the appropriateness of the generated images.
+Tools: programming language (e.g. Python), machine learning libraries (e.g. TensorFlow), image generation libraries (e.g. Keras)
+Success Factors: Model generates images that support the project goal and are considered appropriate by relevant stakeholders
+Completion Criteria: Generated images meet design requirements, documented in README file
 Status: INCOMPLETE
-Advice: Use established machine learning and natural language processing techniques, and ensure that the ethical safeguards are built into the system from the beginning.
-File/Directory: project_directory/notebooks/
+Advice: Be sensitive to the incarcerated population and avoid triggering images during the development process
+File/Directory: Not specified
 
-Task 006: Train and evaluate the AI system
-Description:  1. Train the AI system using the preprocessed datasets using 'execute_code' and 'read_csv'. 2. Monitor training progress and tune hyperparameters. 3. Assess model accuracy and fairness. 4. Document training logs and performance metrics.
-Tools: execute_code, read_csv
-Success Factors: AI system is trained and demonstrates strong performance on validation and test sets.
-Completion Criteria: AI system has been trained and evaluated, with training logs and performance metrics stored in the 'documents/' directory.
+Task 007: Implement Ethical Considerations
+Description: Address ethical concerns and implement privacy protection mechanisms in the project. Steps: 1) Research ethical guidelines for AI, 2) Collaborate with ethicists or obtain their feedback, 3) Integrate ethics and privacy into the project, 4) Document ethical considerations and implementation in the README file.
+Tools: programming language (e.g. Python), ethical guidelines for AI
+Success Factors: Ethics and privacy are integrated into the project
+Completion Criteria: Ethical considerations and implementation are documented in README file
 Status: INCOMPLETE
-Advice: Monitor training progress closely and ensure that the system is not overfitting or underfitting the data.
-File/Directory: project_directory/documents/, project_directory/notebooks/
+Advice: Regularly reassess ethical concerns and adjust as needed
+File/Directory: Not specified
 
-Task 007: Deploy the AI system in a production environment
-Description:  1. Configure the production environment for the AI system. 2. Deploy the AI system using 'execute_code'. 3. Monitor the performance of the AI system in the production environment. 4. Address any issues that arise.
-Tools: execute_code
-Success Factors: AI system is deployed and functioning properly, with regular monitoring for performance and issues.
-Completion Criteria: AI system is deployed and functioning properly, with regular monitoring and maintenance.
+Task 008: Test and Evaluate Models
+Description: Validate the models' performance and ensure they meet the project's requirements. Steps: 1) Utilize testing libraries (e.g. unittest), 2) Evaluate the models using predefined metrics (e.g. accuracy, precision, recall), 3) Document the results in the README file.
+Tools: testing libraries (e.g. unittest), evaluation metrics
+Success Factors: Models exhibit satisfactory performance
+Completion Criteria: Model performance meets established thresholds, documented in README file
 Status: INCOMPLETE
-Advice: Ensure that the production environment is secure and that the AI system is regularly updated to address any potential vulnerabilities.
-File/Directory: N/A
+Advice: Monitor model performance during and after deployment
+File/Directory: Not specified
+
+Task 009: Deploy Models
+Description: Distribute the models for use in the target environment (e.g. prisons). Steps: 1) Choose a deployment environment (e.g. cloud, on-premises), 2) Ensure models are accessible and usable in the target environment, 3) Document the deployment process and environment in the README file.
+Tools: deployment environment (e.g. cloud, on-premises)
+Success Factors: Models are accessible and usable in the target environment
+Completion Criteria: Models deployed in target environment and confirmed operational, documented in README file
+Status: INCOMPLETE
+Advice: Monitor models for any unintended consequences during deployment
+File/Directory: Not specified
+
+Task 010: Maintain and Update Models
+Description: Regularly maintain and update the models, incorporating user feedback and addressing any issues. Steps: 1) Utilize a version control system (e.g. Git), 2) Implement updates based on user feedback, 3) Document updates in the README file, 4) Release updates in a timely manner.
+Tools: programming language, version control system (e.g. Git), machine learning libraries
+Success Factors: Models are continuously improved and updated based on user feedback
+Completion Criteria: Updates are implemented and released in a timely manner, documented in README file
+Status: INCOMPLETE
+Advice: Monitor models for any need for updating and respond quickly
+File/Directory: Not specified
 
