@@ -1,0 +1,65 @@
+Goal: To develop a specifically designed AI system, utilizing machine learning and natural language processing, that addresses loneliness and depression among incarcerated individuals by providing them with a consistent and understanding conversational partner, while ensuring ethical safeguards are in place to prevent AI exploitation.
+
+Task 001: Establish a well-organized project infrastructure
+Description:  1. Create a root directory for the project using 'create_folder'. 2. Within the root directory, create a 'documents' folder for storing all textual files, a 'data' folder for storing all datasets, a 'notebooks' folder for Jupyter notebooks, and a 'models' folder for storing the trained AI models. 3. Create a 'README.md' file in the root directory using 'create_file'. 4. Write a detailed project description, purpose, and instructions for execution in the 'README.md' file. 5. Create a 'requirements.txt' file in the root directory using 'create_file' and list all necessary libraries and their versions for the project.
+Tools: create_folder, create_file
+Success Factors: A well-organized project directory exists, including a detailed README file, requirements.txt, documents, data, notebooks, and models directories.
+Completion Criteria: Project directory is created with all necessary files and directories.
+Status: INCOMPLETE
+Advice: Ensure that the project directory is easily accessible, the README file contains clear instructions for project setup and execution, and all relevant files and directories are included.
+File/Directory: project_directory/README.md, project_directory/requirements.txt, project_directory/documents/, project_directory/data/, project_directory/notebooks/, project_directory/models/
+
+Task 002: Conduct an exhaustive literature review on relevant topics
+Description:  1. Use 'search_web' and 'scrape_web' to search for and gather peer-reviewed articles, reputable news sources, and government reports related to AI for addressing loneliness and depression among incarcerated individuals. 2. Organize the literature in the 'documents/literature' directory. 3. Summarize the findings in a 'literature_review.md' file in the 'documents/' directory.
+Tools: search_web, scrape_web, create_folder, create_file
+Success Factors: At least 20 relevant resources have been gathered and summarized in a literature review document.
+Completion Criteria: 20 or more relevant resources have been gathered and summarized in the literature review file.
+Status: INCOMPLETE
+Advice: Focus on high-quality sources and ensure that the literature review covers relevant topics such as AI for mental health, AI ethics, and incarceration.
+File/Directory: project_directory/documents/literature/, project_directory/documents/literature_review.md
+
+Task 003: Develop comprehensive system requirements specifications
+Description:  1. Read and list all relevant files from the 'documents/literature' directory using 'read_file' and 'list_files'. 2. Identify and document the desired AI behaviors in a 'system_requirements.txt' file in the root directory. 3. Identify and document the necessary datasets for training and evaluation. 4. Define and document ethical considerations, including privacy, consent, and fairness.
+Tools: read_file, list_files
+Success Factors: A system requirements document is completed, detailing desired AI behaviors, datasets, and ethical considerations.
+Completion Criteria: System requirements document is complete and includes clear, specific information.
+Status: INCOMPLETE
+Advice: Ensure that ethical considerations are well-defined and that they address potential issues such as privacy, consent, and fairness.
+File/Directory: project_directory/requirements.txt
+
+Task 004: Acquire, preprocess, and split the required datasets
+Description:  1. Search for and gather datasets related to mental health, incarceration, and conversational data. 2. Clean and preprocess the datasets using 'read_csv', 'write_csv', 'append_csv', and 'update_csv'. 3. Split the datasets into training, validation, and test sets.
+Tools: search_web, scrape_web, search_file, read_csv, write_csv, append_csv, update_csv
+Success Factors: Datasets are acquired, preprocessed, and split into training, validation, and test sets.
+Completion Criteria: Preprocessed datasets are stored in the 'data/' directory, with clear labels for training, validation, and test sets.
+Status: INCOMPLETE
+Advice: Ensure that the datasets are diverse and representative of the target population. Use established preprocessing techniques to ensure data quality and minimize bias.
+File/Directory: project_directory/data/
+
+Task 005: Design and implement the AI system architecture
+Description:  1. Use 'execute_code' and 'read_file' to design the AI system architecture based on the system requirements and preprocessed datasets. 2. Implement the machine learning algorithms, natural language processing techniques, and ethical safeguards. 3. Test the implemented AI system for meaningful conversation and ethical safeguards.
+Tools: execute_code, read_file
+Success Factors: AI system architecture is designed and implemented, demonstrating the ability to engage in meaningful conversation and ethical safeguards.
+Completion Criteria: AI system can engage in conversation and ethical safeguards are in place.
+Status: INCOMPLETE
+Advice: Use established machine learning and natural language processing techniques, and ensure that the ethical safeguards are built into the system from the beginning.
+File/Directory: project_directory/notebooks/
+
+Task 006: Train and evaluate the AI system
+Description:  1. Train the AI system using the preprocessed datasets using 'execute_code' and 'read_csv'. 2. Monitor training progress and tune hyperparameters. 3. Assess model accuracy and fairness. 4. Document training logs and performance metrics.
+Tools: execute_code, read_csv
+Success Factors: AI system is trained and demonstrates strong performance on validation and test sets.
+Completion Criteria: AI system has been trained and evaluated, with training logs and performance metrics stored in the 'documents/' directory.
+Status: INCOMPLETE
+Advice: Monitor training progress closely and ensure that the system is not overfitting or underfitting the data.
+File/Directory: project_directory/documents/, project_directory/notebooks/
+
+Task 007: Deploy the AI system in a production environment
+Description:  1. Configure the production environment for the AI system. 2. Deploy the AI system using 'execute_code'. 3. Monitor the performance of the AI system in the production environment. 4. Address any issues that arise.
+Tools: execute_code
+Success Factors: AI system is deployed and functioning properly, with regular monitoring for performance and issues.
+Completion Criteria: AI system is deployed and functioning properly, with regular monitoring and maintenance.
+Status: INCOMPLETE
+Advice: Ensure that the production environment is secure and that the AI system is regularly updated to address any potential vulnerabilities.
+File/Directory: N/A
+

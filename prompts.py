@@ -29,12 +29,11 @@ For each task, provide the following comprehensive information:
 1. Task number (three-digit format)
 2. A clear, concise, yet descriptive task name
 3. A detailed description of the task, including specific steps and any important considerations
-4. Required tools (select from: create_folder, create_file, search_file, edit_and_apply, read_file, list_files, get_image, perplexity_search, search_web, scrape_web, read_csv, write_csv, append_csv, update_csv, execute_code)
+4. Required actions that need to be taken
 5. Success factors: Clearly defined indicators of task success
 6. Completion criteria: Specific, measurable benchmarks to determine task completion
 7. Initial status (always set to "INCOMPLETE")
 8. Advice: Detailed guidance for the AI agent, including potential pitfalls and best practices
-9. File/Directory: Specify exact file names for creation, reading, writing, etc. Be as specific as possible.
 
 IMPORTANT: Remember that you are instructing an AI agent with specific tools but limited capabilities. The agent cannot physically interact with the world, make phone calls, or engage in activities beyond its digital toolset.
 
